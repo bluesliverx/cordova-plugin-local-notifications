@@ -2,8 +2,8 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="de.appplant.cordova.plugin.local-notification"
-        version="0.8.2-dev">
+        id="com.savillians.cordova.plugin.local-notification"
+        version="0.8.4">
 
     <name>LocalNotification</name>
 
@@ -19,8 +19,8 @@
 
     <!-- cordova -->
     <engines>
-        <engine name="cordova" version=">=3.6.0" />
-        <engine name="cordova" version="<4.0.0" />
+        <engine name="cordova" version="&gt;=3.6.0" />
+        <engine name="cordova" version="&lt;4.0.0" />
     </engines>
 
     <!-- dependencies -->
@@ -83,42 +83,42 @@
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="LocalNotification">
-                <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification"/>
+                <param name="android-package" value="com.savillians.cordova.plugin.localnotification.LocalNotification"/>
             </feature>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
 
             <receiver
-                android:name="de.appplant.cordova.plugin.localnotification.TriggerReceiver"
+                android:name="com.savillians.cordova.plugin.localnotification.TriggerReceiver"
                 android:exported="false" />
 
             <receiver
-                android:name="de.appplant.cordova.plugin.localnotification.ClearReceiver"
+                android:name="com.savillians.cordova.plugin.localnotification.ClearReceiver"
                 android:exported="false" />
 
             <activity
-                android:name="de.appplant.cordova.plugin.localnotification.ClickActivity"
+                android:name="com.savillians.cordova.plugin.localnotification.ClickActivity"
                 android:launchMode="singleInstance"
                 android:theme="@android:style/Theme.NoDisplay"
                 android:exported="false" />
 
             <receiver
-                android:name="de.appplant.cordova.plugin.notification.TriggerReceiver"
+                android:name="com.savillians.cordova.plugin.notification.TriggerReceiver"
                 android:exported="false" />
 
             <receiver
-                android:name="de.appplant.cordova.plugin.notification.ClearReceiver"
+                android:name="com.savillians.cordova.plugin.notification.ClearReceiver"
                 android:exported="false" />
 
-            <receiver android:name="de.appplant.cordova.plugin.localnotification.RestoreReceiver" android:exported="false" >
+            <receiver android:name="com.savillians.cordova.plugin.localnotification.RestoreReceiver" android:exported="false" >
                 <intent-filter>
                     <action android:name="android.intent.action.BOOT_COMPLETED" />
                 </intent-filter>
             </receiver>
 
             <activity
-                android:name="de.appplant.cordova.plugin.notification.ClickActivity"
+                android:name="com.savillians.cordova.plugin.notification.ClickActivity"
                 android:launchMode="singleInstance"
                 android:theme="@android:style/Theme.NoDisplay"
                 android:exported="false" />
